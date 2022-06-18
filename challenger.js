@@ -1,13 +1,13 @@
-/*Get first n characters of string*/
+/*Extract first half of string*/
 
 // Write a function that takes a string (a) as argument
-// Get the first 3 characters of a
+// Extract the first half a
 // Return the result
 
 function myFunction (a) {
-    return a.slice(0,3);
+    return a.slice(0,a.length/2);
 }
 
-console.log(myFunction('abcdefg'));
+console.log(myFunction('abcdefgh'));
 console.log(myFunction('1234'));
-console.log(myFunction('fgedcba'));
+console.log(myFunction('gedcba'));
