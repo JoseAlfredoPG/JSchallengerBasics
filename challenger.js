@@ -1,16 +1,12 @@
-/*Get type of value*/
+/*Get nth character of string*/
 
-// Write a function that takes a value as argument
-// Return the type of the value
+// Write a function that takes a string (a) and a number (n) as argument
+// Return the nth character of 'a'
 
-
-function myFunction (a) {
-    return typeof a;
+function myFunction (a,n) {
+    return a[n-1];
 }
 
-console.log(myFunction(1));
-console.log(myFunction(false));
-console.log(myFunction({}));
-console.log(myFunction(null));
-console.log(myFunction('string'));
-console.log(myFunction(['array']));
+console.log(myFunction('abcd',1));
+console.log(myFunction('zyxbwpl',5));
+console.log(myFunction('gfedcba',3));
