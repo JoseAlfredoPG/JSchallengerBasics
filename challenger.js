@@ -1,11 +1,11 @@
-/*Remove first n characters of string*/
+/*Get last n characters of string*/
 
-// Write a function that takes a string (a) as argument
-// Remove the first 3 characters of a
+// Write a function that takes a string as argument
+// Extract the last 3 characters from the string
 // Return the result
 
-function myFunction (a,n) {
-    return a.slice(3);
+function myFunction (str) {
+    return str.slice(-3);
 }
 
 console.log(myFunction('abcdefg'));
