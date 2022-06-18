@@ -1,14 +1,16 @@
-/*Comparison operators, strict equality*/
+/*Get type of value*/
 
-// Write a function that takes two values, say a and b, as arguments
-// Return true if the two values are equal and of the same type
+// Write a function that takes a value as argument
+// Return the type of the value
 
 
-function myFunction (a,b) {
-    return a===b;
+function myFunction (a) {
+    return typeof a;
 }
 
-console.log(myFunction(2,3));
-console.log(myFunction(3,3));
-console.log(myFunction(1,'1'));
-console.log(myFunction('10','10'));
+console.log(myFunction(1));
+console.log(myFunction(false));
+console.log(myFunction({}));
+console.log(myFunction(null));
+console.log(myFunction('string'));
+console.log(myFunction(['array']));
