@@ -1,38 +1,27 @@
-/*Insert character after every n characters (backwards)*/
+/*Find the correct word by incrementing letters in alphabet*/
 
-// Write a function that takes two strings (a and b) as arguments
-// Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'
-// Return the resulting string
+// Write a function that takes a string as argument
+// As it is, the string has no meaning
+// Increment each letter to the next letter in the alphabet
+// Return the correct word
 
 // Your solution
-function myFunction(a, b) {
-  let final = [];
-  let ca = Array.from(a);
-  let con = 1;
-  for (let i = ca.length - 1; i >= 0; i--) {
-    final.push(ca[i]);
-    con++;
-    if(con>3)
-    {
-      final.push(b);
-      con=1;
-    }
-  }
-  return final.reverse().join('');
+function myFunction(str) {
+let res='';
+for(let i=0; i<str.length; i++) {
+  let x=String.fromCharCode(str.charCodeAt(i)+1);
+  res+=x;
+}
+  return res;
 }
 
 // The author's solution
-function myFunction(a, b) {
-   let result = [];
-   let rest = a;
-   while (rest.length) {
-   	result.push(rest.slice(-3));
-   	rest = rest.slice(0, -3);
-   }
-   return result.reverse().join(b);
+function myFunction(str) {
+  const arr = [...str];
+  const correctedArray = arr.map(e => String.fromCharCode(e.charCodeAt()+1));
+  return correctedArray.join('');
 }
 
-
-console.log(myFunction('1234567', '.'));
-console.log(myFunction('abcde', '$'));
-console.log(myFunction('zxyzxyzxyzxyzxyz', 'w'));
+console.log(myFunction('bnchmf'));
+console.log(myFunction('bgddrd'));
+console.log(myFunction('sdrshmf'));
