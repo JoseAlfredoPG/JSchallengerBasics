@@ -1,21 +1,18 @@
-/*Return the percentage of a number*/
+/*Basic JavaScript math operators*/
 
-// Write a function that takes two numbers (a and b) as argument
-// Return b percent of a
+// Write a function that takes 6 values (a,b,c,d,e,f) as arguments
+// Sum a and b
+// Then substract by c
+// Then multiply by d and divide by e
+// Finally raise to the power of f and return the result
+// Tipp: mind the order
 
 
-// Your solution
-function myFunction(a,b){
-    return a*b/100;
+
+function myFunction(a,b,c,d,e,f){
+    return (((a+b)-c)*d/e)**f;
  }
 
-//  The author's solution
- function myFunction(a,b){
-   return b/100*a
- }
-
-
-
-console.log(myFunction(100,50));
-console.log(myFunction(10,1));
-console.log(myFunction(500,25));
+console.log(myFunction(6,5,4,3,2,1));
+console.log(myFunction(6,2,1,4,2,3));
+console.log(myFunction(2,3,6,4,2,3));
