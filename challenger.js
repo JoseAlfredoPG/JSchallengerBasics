@@ -1,26 +1,18 @@
-/*Check whether a string contains another string and concatenate*/
+/*Round a number to 2 decimal places*/
 
-// Write a function that takes two strings (a and b) as arguments
-// If a contains b, append b to the beginning of a
-// If not, append it to the end
-// Return the concatenation
+// Write a function that takes a number (a) as argument
+// Round a to the 2nd digit after the comma
+// Return the rounded number
 
 
 // Your solution
-function myFunction(a, b) {
-    if (a.indexOf(b) > 0) {
-        return b + a;
-    }
-    return a + b;
+function myFunction(a) {
+  
+    return Number(a.toFixed(2)) ;
 }
 
-//  The author's solution
 
-function myFunction(a, b) {
-    return a.indexOf(b) === -1 ? a + b : b + a
-}
-
-console.log(myFunction('cheese', 'cake'));
-console.log(myFunction('lips', 's'));
-console.log(myFunction('Java', 'script'));
-console.log(myFunction(' think, therefore I am', 'I'));
+console.log(myFunction(2.12397));
+console.log(myFunction(3.136));
+console.log(myFunction(1.12397));
+console.log(myFunction(26.1379));
