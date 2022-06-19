@@ -1,47 +1,30 @@
-/*Return the next higher prime number*/
+/*Find next higher natural number that is divisble by y*/
 
-// This challenge is a little bit more complex
-// Write a function that takes a number (a) as argument
-// If a is prime, return a
-// If not, return the next higher prime number
+// Write a function that takes two numbers, say x and y, as arguments
+// Check if x is divisible by y
+// If yes, return x
+// If not, return the next higher natural number that is divisible by y
 
 
 // Your solution
-function myFunction(a) {
-    let primo = true;
-    for (let i = 2; i < a / 2; i++) {
-        if (a % i == 0) { primo = false }
-    }
-    if(primo==false) 
-    { 
-       
-        while(primo==false) {
-            a++;
-            primo=true;
-            for (let i = 2; i < a / 2; i++) {
-                if (a % i == 0) { primo = false }
-            }
-        };
-        return a;
-    }
-    return a;
+function myFunction(x,y) {
+   if(x%y !== 0) {
+      while(x%y!==0) {
+        x++;
+      }
+      return x;
+   }
+    return x;
 }
 
 // The author's solution
 
-function myFunction( a ) {
-  function isPrime(num) {
-    for (let i = 2; i <= Math.sqrt(num); i++) {
-      if (num % i === 0) return false;
-    }
-    return num > 1;
-  }
- let n = a;
- while (!isPrime(n)) n++;
-return n
+function myFunction(x, y) {
+  while (x % y !== 0) x++;
+  return x;
 }
 
-console.log(myFunction(38));
-console.log(myFunction(7));
-console.log(myFunction(115));
-console.log(myFunction(2000));
+console.log(myFunction(1,23));
+console.log(myFunction(23,23));
+console.log(myFunction(7,3));
+console.log(myFunction(-5,7));
